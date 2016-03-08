@@ -7,16 +7,16 @@ cat > /etc/dnsmasq-private.conf <<END_OF_PRIVATE_CONFIG
 
 interface=wl_private
 
-address=/protonet/10.43.0.1
-address=/$(hostname)/10.43.0.1
+address=/protonet/10.42.0.1
+address=/$(hostname)/10.42.0.1
 
-dhcp-range=wl_private,10.43.0.10,10.43.255.250,24h
+dhcp-range=wl_private,10.42.0.10,10.42.255.250,24h
 
 # Gateway
-dhcp-option=3,10.43.0.1
+dhcp-option=3,10.42.0.1
 
 # DNS
-dhcp-option=6,10.43.0.1
+dhcp-option=6,10.42.0.1
 
 # IP Forward (no)
 dhcp-option=19,0
@@ -41,16 +41,16 @@ cat > /etc/dnsmasq-public.conf <<END_OF_PUBLIC_CONFIG
 
 interface=wl_public
 
-address=/protonet/10.42.0.1
-address=/$(hostname)/10.42.0.1
+address=/protonet/10.43.0.1
+address=/$(hostname)/10.43.0.1
 
-dhcp-range=wl_public,10.42.0.10,10.42.255.250,24h
+dhcp-range=wl_public,10.43.0.10,10.43.255.250,24h
 
 # Gateway
-dhcp-option=3,10.42.0.1
+dhcp-option=3,10.43.0.1
 
 # DNS
-dhcp-option=6,10.42.0.1
+dhcp-option=6,10.43.0.1
 
 # IP Forward (no)
 dhcp-option=19,0
