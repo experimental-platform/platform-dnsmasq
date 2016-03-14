@@ -10,4 +10,4 @@ RUN chmod 755 /prep.sh
 
 ENTRYPOINT ["/prep.sh"]
 
-CMD ["/usr/sbin/dnsmasq", "/etc/dnsmasq-private.conf"]
+CMD ["dumb-init", "/usr/sbin/dnsmasq", "/etc/dnsmasq-private.conf"]
